@@ -31,3 +31,4 @@ BEFORE OFFICIAL LAUNCH
 
 The app can be previewed locally by opening index.html, but service-worker/offline installation
 works only when served from localhost or a secure HTTPS website.
+Ashanti Regional COCSU Official Website.

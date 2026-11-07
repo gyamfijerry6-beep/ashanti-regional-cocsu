@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#123b2b">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" href="./icon.svg" type="image/svg+xml">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="COCSU Ashanti">
+<title>Ashanti Regional COCSU</title>
+<style>
+:root{--green:#123b2b;--green2:#1d5a40;--gold:#e8b94f;--cream:#f7f5ef;--ink:#1d2922;--muted:#68756d;--white:#fff;--line:#e4e8e2;--red:#a53b35}
+*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font:15px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+header{background:linear-gradient(130deg,var(--green),#246747);color:white;padding:24px 18px 22px;border-bottom:4px solid var(--gold)}
+.wrap{max-width:1050px;margin:auto}header .top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.logo{width:48px;height:48px;border:2px solid var(--gold);border-radius:50%;display:grid;place-items:center;font-weight:800;color:var(--gold);font-size:14px;flex:none}
+h1{font-size:clamp(21px,4vw,30px);margin:0;line-height:1.15}header p{margin:8px 0 0;color:#e3eee6}
+.badge{font-size:11px;border:1px solid #ffffff66;border-radius:20px;padding:5px 9px;white-space:nowrap}
+nav{display:flex;gap:7px;overflow:auto;padding:12px 14px;background:white;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+nav button{border:0;background:#eef3ee;color:var(--green);padding:9px 13px;border-radius:22px;white-space:nowrap;font-weight:650;cursor:pointer}
+nav button.active{background:var(--green);color:white}
+main{max-width:1050px;margin:20px auto;padding:0 14px 50px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.card{background:white;border:1px solid var(--line);border-radius:16px;padding:17px;box-shadow:0 3px 12px #173d2510;margin-bottom:14px}
+.card h2,.card h3{margin:0 0 10px;color:var(--green)}h2{font-size:21px}h3{font-size:17px}
+.eyebrow{color:var(--green2);font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+.hero{background:#eaf2eb;border-left:4px solid var(--gold);padding:16px;border-radius:12px;margin-bottom:15px}
+.hero strong{font-size:18px;color:var(--green)}
+p{margin:7px 0}.muted{color:var(--muted);font-size:13px}
+button,.btn{cursor:pointer;border:0;border-radius:10px;background:var(--green);color:white;padding:10px 13px;font-weight:650}
+button.secondary{background:#edf3ee;color:var(--green)}button.gold{background:var(--gold);color:#2b2b20}
+input,textarea,select{width:100%;padding:11px;border:1px solid #d8e0d8;border-radius:9px;font:inherit;background:#fff;margin:5px 0 10px}
+textarea{min-height:90px;resize:vertical}label{font-size:13px;font-weight:650;color:#34473b}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.row>*{flex:1}
+.item{padding:12px 0;border-bottom:1px solid var(--line)}.item:last-child{border:0}
+.tag{display:inline-block;background:#edf3ee;color:var(--green);padding:3px 8px;border-radius:20px;font-size:11px;font-weight:700}
+.hidden{display:none!important}.stat{font-size:26px;font-weight:800;color:var(--green)}
+.notice{padding:12px;border-radius:10px;background:#fff7df;color:#5e4a17;font-size:13px}
+footer{text-align:center;color:var(--muted);padding:25px;font-size:12px}
+.actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:10px}
+.answer{display:block;width:100%;text-align:left;margin:7px 0;background:#f0f4f0;color:var(--ink);border:1px solid var(--line)}
+.answer.correct{background:#dff3e4;border-color:#60a66d}.answer.wrong{background:#fae6e3;border-color:#d78a82}
+@media(max-width:680px){.grid{grid-template-columns:1fr}.badge{display:none}main{margin-top:14px}.card{padding:15px}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+ <div class="top"><div class="row" style="flex:initial;align-items:center"><div class="logo">COCSU</div><div><h1>ASHANTI REGIONAL COCSU</h1><p>Official Group • Together in Christ, Together in Service</p></div></div><span class="badge">COMMUNITY HUB</span></div>
+</div></header>
+<nav id="nav">
+ <button class="active" data-page="home">Home</button><button data-page="bible">Bible Quiz</button><button data-page="discuss">Discussions</button><button data-page="community">Community</button><button data-page="events">Events</button><button data-page="media">Media & Talent</button><button data-page="admin">Admin Desk</button>
+</nav>
+<main>
+<section id="home" class="page">
+ <div class="hero"><span class="eyebrow">Welcome to the community</span><br><strong>Faith. Fellowship. Service.</strong><p>One place to connect COCSU members across the Ashanti Region, grow in God's Word and share what is happening in our campuses.</p></div>
+ <div class="grid">
+  <div class="card"><span class="eyebrow">This week's rhythm</span><h2>Weekly activities</h2>
+   <div class="item"><b>Monday — Motivation Monday</b><div class="muted">A Bible verse and encouragement for the week.</div></div>
+   <div class="item"><b>Tuesday — Bible Quiz</b><div class="muted">Test your knowledge of Scripture.</div></div>
+   <div class="item"><b>Wednesday — Wisdom Wednesday</b><div class="muted">A question about Christian living.</div></div>
+   <div class="item"><b>Thursday — Throwback Thursday</b><div class="muted">Share COCSU memories and photos.</div></div>
+   <div class="item"><b>Friday — Fun Friday</b><div class="muted">Christian riddles and puzzles.</div></div>
+   <div class="item"><b>Saturday — Talent Saturday</b><div class="muted">Celebrate members' gifts and skills.</div></div>
+   <div class="item"><b>Sunday — Spiritual Sunday</b><div class="muted">Reflect on the Word and worship.</div></div>
+  </div>
+  <div>
+   <div class="card"><span class="eyebrow">Get involved</span><h2>Community snapshot</h2><div class="grid"><div><div class="stat" id="postCount">0</div><div class="muted">Community posts</div></div><div><div class="stat" id="eventCount">0</div><div class="muted">Events shared</div></div></div><div class="actions"><button onclick="showPage('discuss')">Join a discussion</button><button class="secondary" onclick="showPage('events')">View events</button></div></div>
+   <div class="card"><h3>Verse to reflect on</h3><p><b>Hebrews 10:24</b></p><p>“And let us consider one another to provoke unto love and to good works.”</p><p class="muted">How can you encourage another COCSU member this week?</p></div>
+   <div class="card"><h3>COCSU Connect</h3><p>A proposed monthly online gathering for Bible discussion, testimonies, exhortation and questions.</p><span class="tag">Monthly fellowship idea</span></div>
+  </div>
+ </div>
+ <div class="notice">Demo note: this app saves entries on this device only. To make it a true shared official group app, connect it to an approved database and add administrator accounts.</div>
+</section>
+
+<section id="bible" class="page hidden">
+ <div class="card"><span class="eyebrow">Tuesday challenge</span><h2>Bible Quiz Challenge</h2><p class="muted">Answer the questions and check your score. The questions below are sample questions; administrators can add more in a future connected version.</p>
+ <div id="quizArea"></div><div class="actions"><button onclick="startQuiz()">Restart quiz</button></div><p id="quizScore" aria-live="polite"></p></div>
+ <div class="card"><h3>Verse completion</h3><p>“For God so loved the world, that he gave his only begotten ______.”</p><button class="secondary" onclick="document.getElementById('verseAnswer').classList.toggle('hidden')">Reveal answer</button><p id="verseAnswer" class="hidden"><b>Son</b> — John 3:16.</p></div>
+ <div class="card"><h3>Who am I?</h3><p>I was sold by my brothers, interpreted dreams and later became a ruler in Egypt. Who am I?</p><button class="secondary" onclick="document.getElementById('whoAnswer').classList.toggle('hidden')">Reveal answer</button><p id="whoAnswer" class="hidden"><b>Joseph</b> — Genesis 37–41.</p></div>
+</section>
+
+<section id="discuss" class="page hidden">
+ <div class="card"><span class="eyebrow">Wisdom Wednesday • Question of the Week</span><h2>Start a discussion</h2><p>Share a thoughtful, respectful contribution. Avoid personal attacks and keep discussions Christ-centred.</p>
+ <label for="topic">Discussion topic</label><select id="topic"><option>What challenges do Christian students face today?</option><option>How can young Christians use social media wisely?</option><option>How can we encourage unity among believers?</option><option>What does serving others look like on campus?</option><option>Suggest a topic</option></select>
+ <label for="postName">Your name or campus (optional)</label><input id="postName" placeholder="e.g. Ama • KNUST">
+ <label for="postText">Your contribution</label><textarea id="postText" placeholder="Share your thoughts..."></textarea><button onclick="addPost()">Post contribution</button></div>
+ <div class="card"><h3>Community discussion board</h3><div id="posts"></div></div>
+ <div class="card"><h3>Christian debate ideas</h3><ul><li>How can Christian students balance faith and academic responsibilities?</li><li>Does social media strengthen or weaken fellowship?</li><li>What practical steps can promote unity among Christians?</li><li>How can young people serve their local congregations?</li></ul><p class="muted">Debate ideas are for respectful learning, not arguments.</p></div>
+</section>
+
+<section id="community" class="page hidden">
+ <div class="grid">
+  <div class="card"><span class="eyebrow">Get to know one another</span><h2>Introduce yourself</h2><label>Name</label><input id="memberName" placeholder="Your name"><label>Campus / congregation</label><input id="memberCampus" placeholder="Your campus or congregation"><label>A talent, interest or fun fact</label><input id="memberFact" placeholder="Tell us something about yourself"><button onclick="addMember()">Share introduction</button></div>
+  <div class="card"><span class="eyebrow">Care and encouragement</span><h2>Prayer & thanksgiving</h2><label>Your name (optional)</label><input id="prayerName" placeholder="Name or anonymous"><label>Share a prayer request or thanksgiving</label><textarea id="prayerText" placeholder="Share only what you are comfortable sharing..."></textarea><button onclick="addPrayer()">Submit</button><p class="muted">Please do not post private or highly sensitive information. Contact a trusted church leader directly when personal support is needed.</p></div>
+  <div class="card"><h3>Member spotlight</h3><p>Celebrate a member's service, academic effort, leadership or positive contribution.</p><label>Member / campus</label><input id="spotName" placeholder="Name and campus"><label>What are we celebrating?</label><textarea id="spotText" placeholder="Write a short appreciation..."></textarea><button onclick="addSpot()">Add spotlight</button></div>
+  <div class="card"><h3>Birthdays & milestones</h3><p>Use this space to celebrate birthdays, graduations, achievements and other milestones.</p><label>Celebration</label><input id="celebrateText" placeholder="e.g. Happy birthday, ..."><button onclick="addCelebration()">Share celebration</button></div>
+ </div>
+ <div class="card"><h3>Community board</h3><div id="communityFeed"></div></div>
+</section>
+
+<section id="events" class="page hidden">
+ <div class="card"><span class="eyebrow">Regional fellowship</span><h2>Events & COCSU Connect</h2><p>Add Bible quizzes, debates, singing competitions, drama, football games, workshops and monthly online fellowships.</p>
+ <label>Event title</label><input id="eventTitle" placeholder="e.g. Ashanti Regional Bible Quiz"><div class="row"><div><label>Date</label><input type="date" id="eventDate"></div><div><label>Time</label><input type="time" id="eventTime"></div></div>
+ <label>Venue / online platform</label><input id="eventVenue" placeholder="Venue or meeting platform"><label>Details</label><textarea id="eventDetails" placeholder="What should members know?"></textarea><button onclick="addEvent()">Add event</button></div>
+ <div class="card"><h3>Upcoming events</h3><div id="eventsList"></div></div>
+ <div class="card"><h3>Suggested programme formats</h3><div class="item"><b>COCSU Connect</b><p class="muted">30–45 minutes: welcome, short exhortation, Bible discussion, Q&A and prayer.</p></div><div class="item"><b>Regional talent day</b><p class="muted">Christian music, poetry, drama and spoken-word presentations.</p></div><div class="item"><b>Fellowship sports day</b><p class="muted">Football and friendly activities that strengthen relationships.</p></div></div>
+</section>
+
+<section id="media" class="page hidden">
+ <div class="card"><span class="eyebrow">Creativity & gifts</span><h2>Media and talent showcase</h2><p>Share ideas for Christian music, poetry, drama, educational videos, inspirational posters and COCSU throwback memories.</p>
+ <label>Title / description</label><input id="mediaTitle" placeholder="e.g. My spoken-word presentation"><label>Category</label><select id="mediaType"><option>Christian music</option><option>Poetry / spoken word</option><option>Drama</option><option>Inspirational poster</option><option>Video / teaching resource</option><option>COCSU memory</option><option>Other talent</option></select><label>Link or short description</label><textarea id="mediaDesc" placeholder="Add a safe public link or describe your contribution. Do not post private links."></textarea><button onclick="addMedia()">Share showcase entry</button></div>
+ <div class="card"><h3>Talent and media board</h3><div id="mediaList"></div></div>
+ <div class="notice">Only share media you have permission to post. Administrators should review links and uploaded material before sharing them in an official channel.</div>
+</section>
+
+<section id="admin" class="page hidden">
+ <div class="card"><span class="eyebrow">For group administrators</span><h2>Admin engagement desk</h2><p>Use this checklist to keep activities organised. This demo does not provide administrator authentication or remote moderation.</p>
+ <h3>Weekly administrator checklist</h3><label><input type="checkbox" class="check"> Monday motivation posted</label><br><label><input type="checkbox" class="check"> Tuesday Bible quiz posted and answers checked</label><br><label><input type="checkbox" class="check"> Wednesday discussion question posted</label><br><label><input type="checkbox" class="check"> Thursday throwback shared (with permission)</label><br><label><input type="checkbox" class="check"> Friday fun activity posted</label><br><label><input type="checkbox" class="check"> Saturday talent spotlight posted</label><br><label><input type="checkbox" class="check"> Sunday reflection shared</label>
+ <div class="actions"><button class="secondary" onclick="resetChecks()">Reset checklist</button></div></div>
+ <div class="card"><h3>Suggested Digital Engagement Team</h3><p>Form a small team of 3–5 volunteers to prepare content, welcome new members, coordinate quizzes, review submissions and publicise regional programmes.</p><h3>Group guidelines</h3><ol><li>Keep posts relevant to COCSU and Christian fellowship.</li><li>Be respectful when opinions differ.</li><li>Do not spam or share unverified information.</li><li>Get consent before posting members' photos or personal details.</li><li>Use approved administrators for official announcements.</li></ol></div>
+ <div class="card"><h3>Export demo content</h3><p class="muted">Download the posts and activities saved on this device as a JSON backup.</p><button onclick="exportData()">Export data</button> <button class="secondary" onclick="clearData()">Clear local demo data</button></div>
+</section>
+</main>
+<footer>ASHANTI REGIONAL COCSU • Together in Christ, Together in Service<br>Community prototype — connect an approved backend before official public launch.</footer>
+<script>
+const $=id=>document.getElementById(id);
+const keys=['posts','members','prayers','spotlights','celebrations','events','media'];
+function get(k){try{return JSON.parse(localStorage.getItem('cocsu_'+k)||'[]')}catch(e){return []}}
+function save(k,v){localStorage.setItem('cocsu_'+k,JSON.stringify(v));render()}
+function esc(s){return String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function showPage(id){document.querySelectorAll('.page').forEach(p=>p.classList.toggle('hidden',p.id!==id));document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('active',b.dataset.page===id));window.scrollTo({top:0,behavior:'smooth'});render()}
+document.querySelectorAll('nav button').forEach(b=>b.addEventListener('click',()=>showPage(b.dataset.page)));
+function addPost(){let t=$('postText').value.trim();if(!t)return alert('Please write a contribution first.');let a=get('posts');a.unshift({topic:$('topic').value,name:$('postName').value.trim()||'COCSU member',text:t,date:new Date().toLocaleString()});save('posts',a);$('postText').value=''}
+function addMember(){let n=$('memberName').value.trim(),c=$('memberCampus').value.trim();if(!n||!c)return alert('Please add your name and campus.');let a=get('members');a.unshift({name:n,campus:c,fact:$('memberFact').value,date:new Date().toLocaleDateString()});save('members',a);['memberName','memberCampus','memberFact'].forEach(x=>$(x).value='')}
+function addPrayer(){let t=$('prayerText').value.trim();if(!t)return alert('Please add a request or thanksgiving.');let a=get('prayers');a.unshift({name:$('prayerName').value.trim()||'Anonymous',text:t,date:new Date().toLocaleDateString()});save('prayers',a);$('prayerText').value=''}
+function addSpot(){let n=$('spotName').value.trim(),t=$('spotText').value.trim();if(!n||!t)return alert('Please complete both fields.');let a=get('spotlights');a.unshift({name:n,text:t});save('spotlights',a);$('spotName').value=$('spotText').value=''}
+function addCelebration(){let t=$('celebrateText').value.trim();if(!t)return alert('Please write a celebration.');let a=get('celebrations');a.unshift({text:t});save('celebrations',a);$('celebrateText').value=''}
+function addEvent(){let t=$('eventTitle').value.trim();if(!t)return alert('Please enter an event title.');let a=get('events');a.unshift({title:t,date:$('eventDate').value,time:$('eventTime').value,venue:$('eventVenue').value,details:$('eventDetails').value});save('events',a);['eventTitle','eventDate','eventTime','eventVenue','eventDetails'].forEach(x=>$(x).value='')}
+function addMedia(){let t=$('mediaTitle').value.trim();if(!t)return alert('Please enter a title.');let a=get('media');a.unshift({title:t,type:$('mediaType').value,desc:$('mediaDesc').value});save('media',a);$('mediaTitle').value=$('mediaDesc').value=''}
+function list(items,fn,empty){return items.length?items.map(fn).join(''):`<p class="muted">${empty}</p>`}
+function render(){
+ $('posts').innerHTML=list(get('posts'),x=>`<div class="item"><span class="tag">${esc(x.topic)}</span><p>${esc(x.text)}</p><div class="muted">${esc(x.name)} • ${esc(x.date)}</div></div>`,'No contributions yet. Start the conversation!');
+ $('communityFeed').innerHTML=list([...get('members').map(x=>({kind:'Introduction',text:`<b>${esc(x.name)}</b> • ${esc(x.campus)}<br>${esc(x.fact)}`})),...get('prayers').map(x=>({kind:'Prayer / thanks',text:`${esc(x.text)}<br><span class="muted">${esc(x.name)}</span>`})),...get('spotlights').map(x=>({kind:'Member spotlight',text:`<b>${esc(x.name)}</b><br>${esc(x.text)}`})),...get('celebrations').map(x=>({kind:'Celebration',text:esc(x.text)}))],x=>`<div class="item"><span class="tag">${x.kind}</span><p>${x.text}</p></div>`,'No community updates yet.');
+ $('eventsList').innerHTML=list(get('events'),x=>`<div class="item"><b>${esc(x.title)}</b><p class="muted">${esc(x.date)} ${esc(x.time)} • ${esc(x.venue)}</p><p>${esc(x.details)}</p></div>`,'No events added yet.');
+ $('mediaList').innerHTML=list(get('media'),x=>`<div class="item"><span class="tag">${esc(x.type)}</span><p><b>${esc(x.title)}</b></p><p>${esc(x.desc)}</p></div>`,'No showcase entries yet.');
+ $('postCount').textContent=get('posts').length+get('members').length+get('prayers').length;
+ $('eventCount').textContent=get('events').length;
+}
+const questions=[
+ {q:'Who built the ark?',a:['Moses','Noah','Abraham','David'],c:1,ref:'Genesis 6'},
+ {q:'Who defeated Goliath?',a:['Saul','Solomon','David','Samuel'],c:2,ref:'1 Samuel 17'},
+ {q:'Where was Jesus born?',a:['Nazareth','Jerusalem','Bethlehem','Capernaum'],c:2,ref:'Matthew 2:1'},
+ {q:'Who was swallowed by a great fish?',a:['Jonah','Elijah','Peter','Paul'],c:0,ref:'Jonah 1:17'},
+ {q:'What is the first book of the Bible?',a:['Exodus','Genesis','Psalms','Matthew'],c:1,ref:'Genesis 1:1'}
+];let qi=0,score=0,locked=false;
+function startQuiz(){qi=0;score=0;locked=false;$('quizScore').textContent='';drawQuestion()}
+function drawQuestion(){if(qi>=questions.length){$('quizArea').innerHTML=`<h3>Quiz complete!</h3><p>You scored ${score} out of ${questions.length}.</p>`;$('quizScore').textContent='Well done! Check the Bible references to learn more.';return}
+ let q=questions[qi];$('quizArea').innerHTML=`<p class="muted">Question ${qi+1} of ${questions.length}</p><h3>${q.q}</h3>${q.a.map((a,i)=>`<button class="answer" onclick="chooseAnswer(${i})">${String.fromCharCode(65+i)}. ${a}</button>`).join('')}`}
+function chooseAnswer(i){if(locked)return;locked=true;let q=questions[qi],buttons=$('quizArea').querySelectorAll('button');buttons[q.c].classList.add('correct');if(i===q.c)score++;else buttons[i].classList.add('wrong');$('quizScore').textContent=`${i===q.c?'Correct!':'Not quite.'} Bible reference: ${q.ref}.`;let b=document.createElement('button');b.textContent=qi===questions.length-1?'See result':'Next question';b.style.marginTop='10px';b.onclick=()=>{qi++;locked=false;drawQuestion()};$('quizArea').appendChild(b)}
+function resetChecks(){document.querySelectorAll('.check').forEach(x=>x.checked=false)}
+function exportData(){let data={};keys.forEach(k=>data[k]=get(k));let blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='ashanti-cocsu-demo-data.json';a.click();URL.revokeObjectURL(a.href)}
+function clearData(){if(!confirm('Delete all COCSU demo entries saved in this browser?'))return;keys.forEach(k=>localStorage.removeItem('cocsu_'+k));render()}
+startQuiz();render();
+</script>
+<script>
+if ("serviceWorker" in navigator && (location.protocol === "https:" || location.hostname === "localhost")) {
+  window.addEventListener("load", () => navigator.serviceWorker.register("./sw.js").catch(() => {}));
+}
+</script>
+</body></html>

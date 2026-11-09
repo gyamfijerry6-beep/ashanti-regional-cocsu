@@ -13,7 +13,7 @@ This is not yet a shared multi-user platform. Entries created on one phone do no
 HOW TO PUBLISH IT FOR YOUR GROUP (GitHub Pages)
 1. Sign in to GitHub and create a new public repository, for example: ashanti-regional-cocsu.
 2. Upload ALL files in this folder to the repository's root:
-   index.html, manifest.webmanifest, sw.js, icon.svg, README.txt
+   index.html, manifest.webmanifest, sw.js, icon.svg, icon-192.png, icon-512.png, README.txt
 3. In the repository, open Settings > Pages.
 4. Under Build and deployment, choose Deploy from a branch.
 5. Select the main branch and /(root), then Save.
@@ -31,4 +31,3 @@ BEFORE OFFICIAL LAUNCH
 
 The app can be previewed locally by opening index.html, but service-worker/offline installation
 works only when served from localhost or a secure HTTPS website.
-Ashanti Regional COCSU Official Website.
